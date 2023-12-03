@@ -4,9 +4,11 @@ import React, { useState } from "react";
 const Body = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSearch = async () => {
     try {
+      setLoading(true);
       const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`);
       const data = await response.json();
       setSearchResults(data);
@@ -20,6 +22,8 @@ const Body = () => {
     
     } catch (error) {
       console.error('Error fetching data:', error);
+    }finally {
+      setLoading(false); // Set loading to false after data is fetched or in case of an error
     }
   };
 
@@ -35,6 +39,7 @@ const Body = () => {
         />
         <button className="btn-search" onClick={handleSearch}>Search</button>
       </div>
+      {loading && <div className="loader"></div>}
       {searchResults && (
         <div class="data">
           {searchResults.map((entry, index) => (
