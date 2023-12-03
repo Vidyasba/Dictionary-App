@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.header{
+  background-color: black;
+  height: 30px;
+  width: 100%;
+  color:whitesmoke;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-header{
+  color: whitesmoke;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.right-header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color:white;
+}
+
+.right-header ul li {
+  display: inline;
+  margin-left:30px; 
+  margin-right:50px;
+  cursor: pointer;
+  color:white;
+}
+
+.search{
+  margin-left:450px ;
+  top: 80px; /* Adjust top positioning as needed */
+  position: absolute;
+}
+#searchbar{
+  width: 250px;
+  height: 25px;
+}
+.btn-search{
+  height: 26px;
+  background-color: black ;
+  color:white;
+  border:none;
+  border-radius: 2px;
+  width:70px;
+  cursor: pointer;
+  margin-left:2px;
+}
+.body {
+  background-color: rgba(240, 240, 232, 0.683);
+  position: relative; /* Changed to relative */
+  height: 200vh;
+ 
+}
+
+.data{
+  background-color: white;
+  position: absolute;
+  top:120px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ 
+}
+.history{
+  background-color: rgba(240, 240, 232, 0.683);
+  position: relative; /* Changed to relative */
+  height: 200vh;
+}
+.worddeatils{
+  background-color: rgba(240, 240, 232, 0.683);
+  position: relative; /* Changed to relative */
+  height: 200vh;
+}
+.data1{
+  background-color: white;
+  position: absolute;
+  top:20px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+ 
+}
+.linkStyle {
+  text-decoration: none;
+  color: white;
 }
